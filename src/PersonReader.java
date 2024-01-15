@@ -17,26 +17,22 @@ public class PersonReader {
             if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
                 selectedFile = chooser.getSelectedFile();
                 Path file = selectedFile.toPath();
-                // Typical java pattern of inherited classes
-                // we wrap a BufferedWriter around a lower level BufferedOutputStream
                 InputStream in =
                         new BufferedInputStream(Files.newInputStream(file, CREATE));
                 BufferedReader reader =
                         new BufferedReader(new InputStreamReader(in));
 
-                // Finally we can read the file LOL!
                 int line = 0;
                 while (reader.ready()) {
                     rec = reader.readLine();
                     line++;
-                    // echo to screen
                     System.out.printf("\nLine %4d %-60s ", line, rec);
                 }
-                reader.close(); // must close the file to seal it and flush buffer
+                reader.close(); 
                 System.out.println("\n\nData file read!");
 
 
-            } else  // User closed the chooser without selecting a file
+            } else  
             {
                 System.out.println("No file selected!!! ... exiting.\nRun the program again and select a file.");
             }
