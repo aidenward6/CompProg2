@@ -1,0 +1,5 @@
+ID: 000001, Name: Pipeweed, Description: Long Bottom LeafCost: 600.0
+ID: 000002, Name: Lembas, Description: Elven Wayfare BreadCost: 200.0
+ID: 000003, Name: Wine, Description: Woodland Elf WineCost: 400.0
+ID: 000004, Name: Mushrooms, Description: Farmer Rook's FinestCost: 125.0
+ID: 000005, Name: Mithril, Description: Enchanted Dwarven ArmorCost: 3000.0
