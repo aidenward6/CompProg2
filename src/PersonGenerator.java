@@ -10,11 +10,7 @@ import static java.nio.file.StandardOpenOption.CREATE;
 public class PersonGenerator {
     public static void main(String[] args) {
 
-        // a. ID (String)
-        // b. FirstName
-        // c. LastName
-        // d. title (Mr. Ms. etc)
-        // e. Year Of Birth (int)
+      
         String ID = "";
         String fName = "";
         String lName = "";
@@ -27,7 +23,6 @@ public class PersonGenerator {
 
         ArrayList<String> recs = new ArrayList<>();
         do {
-            //get five data fields
             ID = SafeInput.getNonZeroLenString(in, "Enter the ID");
             fName = SafeInput.getNonZeroLenString(in, "Enter First Name");
             lName = SafeInput.getNonZeroLenString(in, "Enter Last Name");
@@ -48,24 +43,20 @@ public class PersonGenerator {
         Path file = Paths.get(workingDirectory.getPath() + "PersonTestData.txt");
         try
         {
-            // Typical java pattern of inherited classes
-            // we wrap a BufferedWriter around a lower level BufferedOutputStream
+            
             OutputStream out =
                     new BufferedOutputStream(Files.newOutputStream(file, CREATE));
             BufferedWriter writer =
                     new BufferedWriter(new OutputStreamWriter(out));
 
-            // Finally can write the file LOL!
 
             for(String rec : recs)
             {
-                writer.write(rec, 0, rec.length());  // stupid syntax for write rec
-                // 0 is where to start (1st char) the write
-                // rec. length() is how many chars to write (all)
-                writer.newLine();  // adds the new line
+                writer.write(rec, 0, rec.length()); 
+                writer.newLine();  
 
             }
-            writer.close(); // must close the file to seal it and flush buffer
+            writer.close(); 
             System.out.println("Data file written!");
         }
         catch (IOException e)
