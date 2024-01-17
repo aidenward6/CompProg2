@@ -29,7 +29,7 @@ public class PersonGenerator {
             title = SafeInput.getNonZeroLenString(in, "Enter title");
             YOB = SafeInput.getRangedInt(in, "Enter the year for the age calc: ", 1000, 9999);
 
-            csvRec = ("ID: " +ID+  ", First Name: " +fName+ ", Last Name: " +lName+ ", Title: " +title+ ", Year of Birth: "+YOB );
+            csvRec = ("ID: " +ID+  ", " +fName+ ", " +lName+ ", " +title+ ", "+YOB );
 
             done = SafeInput.getYNConfirm(in, "Are You Done?");
 
