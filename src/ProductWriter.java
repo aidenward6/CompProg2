@@ -29,7 +29,7 @@ public class ProductWriter {
             description = SafeInput.getNonZeroLenString(in, "Enter Description");
             cost = SafeInput.getRangedDouble(in, "Enter Cost", 0, 99999);
 
-            csvRec = ("ID: " +ID+  ", Name: " +name+ ", Description: " +description+  "Cost: " +cost );
+            csvRec = ("ID: " +ID+  ", " +name+ ", " +description+  ", " +cost );
 
             done = SafeInput.getYNConfirm(in, "Are You Done?");
 
